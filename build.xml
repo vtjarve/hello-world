@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="hello-world" default="build" basedir=".">
+	<target name="update-version">
+	<!-- Update Zabbix version and create a new realise for Zabbix Docker files on GitHub -->
+		<exec executable="git" failonerror="on">
+			<arg line="branch"/>
+		</exec>
+	</target>
+</project>
