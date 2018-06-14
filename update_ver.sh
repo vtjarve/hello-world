@@ -18,7 +18,7 @@ minor_version=$(echo $new_version | cut -d'.' -f 3)
 echo "Using $major_version.$minor_version version of Zabbix"
 
 find ./ -type d | while read DIR; do
-    if [ -d "$DIR" ] && ( [ -f "$DIR/docker-entrypoint.sh" ] || [ "$DIR" == "./snmptraps/alpine" ] || [ "$DIR" == "./snmptraps/centos" ] || [ "$DIR" == "./snmptraps/ubuntu" ] )  && [ -f "$DIR/Dockerfile" ]; then
+    if [ -d "$DIR" ] && ( [ -f "$DIR/docker-entrypoint.sh" ] || [ "$DIR" == "./dir1" ] || [ "$DIR" == "./dir2" ] || [ "$DIR" == "./dir3" ] )  && [ -f "$DIR/Dockerfile" ]; then
         echo "** Updating $DIR/Dockerfile"
         if [ "$is_trunk" == "true" ]; then
             sed -i -e "/^ARG MAJOR_VERSION=/s/=.*/=$major_version/" $DIR/Dockerfile
