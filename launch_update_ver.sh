@@ -14,7 +14,7 @@ git add -A
 git commit -m "Zabbix v3.2.${new_minor_version} release"
 git tag -a 3.2.${new_minor_version} -m "tag hello-world v3.2.${new_minor_version} release"
 git push origin master
-curl --data '{"tag_name": "3.2.${new_minor_version}","target_commitish": "master","name": "3.2.${new_minor_version}","body": "zabbix.com","draft": false,"prerelease": false}' https://api.github.com/repos/vtjarve/hello-world/releases?access_token=6c0e7cc69a4add9a592021ed3d138f1fed7b67fc
+curl --data '{"tag_name": "3.2.${new_minor_version}","target_commitish": "master","name": "3.2.${new_minor_version}","body": "zabbix.com","draft": false,"prerelease": false}' https://api.github.com/repos/vtjarve/hello-world/releases?access_token=0c3e259ec5a0b9fe5b83c5e32e334e181a1ab5cb
 
 echo "Done."
 
